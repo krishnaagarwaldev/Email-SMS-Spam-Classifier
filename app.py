@@ -13,14 +13,17 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 
 # Download stopwords and punkt if not already available
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('stopwords')
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
+# try:
+#     nltk.data.find('corpora/stopwords')
+# except LookupError:
+#     nltk.download('stopwords')
+# try:
+#     nltk.data.find('tokenizers/punkt')
+# except LookupError:
+#     nltk.download('punkt')
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)
+
 
 ps = PorterStemmer()
 
