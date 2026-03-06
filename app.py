@@ -22,6 +22,7 @@ from nltk.stem.porter import PorterStemmer
 # except LookupError:
 #     nltk.download('punkt')
 nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
 nltk.download('stopwords', quiet=True)
 
 
