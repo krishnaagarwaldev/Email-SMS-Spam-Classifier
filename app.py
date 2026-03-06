@@ -21,9 +21,20 @@ from nltk.stem.porter import PorterStemmer
 #     nltk.data.find('tokenizers/punkt')
 # except LookupError:
 #     nltk.download('punkt')
-nltk.download('punkt', quiet=True)
-nltk.download('punkt_tab', quiet=True)
-nltk.download('stopwords', quiet=True)
+
+# nltk.download('punkt', quiet=True)
+# nltk.download('punkt_tab', quiet=True)
+# nltk.download('stopwords', quiet=True)
+
+# ---- DOWNLOAD NLTK DATA (ADD HERE) ----
+@st.cache_resource
+def download_nltk():
+    nltk.download('punkt')
+    nltk.download('punkt_tab')
+    nltk.download('stopwords')
+
+download_nltk()
+# --------------------------------------
 
 
 ps = PorterStemmer()
